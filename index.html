@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
   </ul>
 </nav>
 
@@ -132,18 +132,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,186 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://oliver388.github.io/2022/04/19/%E8%B0%88%E8%B0%88%E6%9C%80%E8%BF%91%E5%81%9A%E9%A2%98%E5%BF%83%E5%BE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/notion-avatar-1645062347664.png">
+      <meta itemprop="name" content="Oliver Ling">
+      <meta itemprop="description" content="Dare to dream,Ready to achieve">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oliver">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/19/%E8%B0%88%E8%B0%88%E6%9C%80%E8%BF%91%E5%81%9A%E9%A2%98%E5%BF%83%E5%BE%97/" class="post-title-link" itemprop="url">谈谈最近做题心得</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-19 19:44:43 / 修改时间：19:50:43" itemprop="dateCreated datePublished" datetime="2022-04-19T19:44:43+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Java为什么直接打印输出集合不是哈希值而是直接输出值"><a href="#Java为什么直接打印输出集合不是哈希值而是直接输出值" class="headerlink" title="Java为什么直接打印输出集合不是哈希值而是直接输出值"></a>Java为什么直接打印输出集合不是哈希值而是直接输出值</h2><p>Collection—AbstractCollection–AbstractList–ArrayList</p>
+<p>在翻阅了源码之后发现<code>ArrayList</code>的父类<code>AbstractList</code>的父类<code>AbstractCollection</code>里面有实现<code>toString()</code>方法，所以打印出来的是内容不是堆栈地址。</p>
+<p>在<code>Object</code>类的<code>toString()</code>方法中，返回的是 <code>getClass().getName() + &quot;@&quot; + Integer.toHexString(hashCode())</code>也就是地址值，打印<code>ArrayList</code>对象没有输出地址值,便可知道<code>ArrayList</code>重写了<code>toString()</code>方法。</p>
+<h2 id="Java如何打印数组"><a href="#Java如何打印数组" class="headerlink" title="Java如何打印数组"></a>Java如何打印数组</h2><p>数组和集合并不同，如果直接<code>System.out.println()</code>打印输出数组，则会显示地址值，而并不会输出内容。</p>
+<ol>
+<li>使用<code>Arrays.toString()</code>将数组转成String再打印输出</li>
+<li>使用<code>Arrays.deepToString()</code>可以把二维数组直接打印输出</li>
+</ol>
+<h2 id="Comparator的个人简单理解-升序降序-与使用"><a href="#Comparator的个人简单理解-升序降序-与使用" class="headerlink" title="Comparator的个人简单理解(升序降序)与使用"></a>Comparator的个人简单理解(升序降序)与使用</h2><p>Java实现Comparator排序是升序，即自然排序，根据参数，返回值来判断是否交换。</p>
+<p><strong>jdk官方的升序基于：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt; <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">&gt; <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">= <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>把-1理解为false，1理解为true（实际上底层源码并不是这样，实现原理参考dalao的博客，只是为了方便记忆使用）<br>如果要升序：那么a&lt;b就是想要的顺序，所以return -1 ，false，不交换<br>如果要降序：那么a&lt;b就是不想要的顺序，所以return 1，true，要交换<br>简而言之，返回1的时候进行位置交换</p>
+<p><strong>示例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">注意！这边不用Collections.sort也行，可以使用LinkedList继承自List的sort方法，即list.sort()</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Collections.sort(list, <span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;() &#123;</span><br><span class="line">	        <span class="meta">@Override</span></span><br><span class="line">	        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123;</span><br><span class="line">	            <span class="keyword">if</span>(o1&gt;o2) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	            <span class="keyword">else</span> <span class="keyword">if</span>(o1&lt;o2) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	            <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	);</span><br><span class="line"><span class="comment">//使用lambda表达式进一步简化</span></span><br><span class="line"><span class="comment">//lambda+compareTo()/compare()</span></span><br><span class="line">list.sort((a,b) -&gt;&#123;</span><br><span class="line">   <span class="keyword">return</span> a.compareTo(b);</span><br><span class="line">&#125;);</span><br><span class="line">list.sort((a,b)-&gt;&#123;</span><br><span class="line">   <span class="keyword">return</span> Integer.compare(a,b);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>以上就是最近的感悟了，算法还得继续刷，数据结构还不够熟悉。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://oliver388.github.io/2022/04/13/%E8%B0%88%E8%B0%88%E6%9C%80%E8%BF%91%E7%9A%84%E6%84%9F%E6%82%9F%E5%92%8C%E6%94%B6%E8%8E%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/notion-avatar-1645062347664.png">
+      <meta itemprop="name" content="Oliver Ling">
+      <meta itemprop="description" content="Dare to dream,Ready to achieve">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oliver">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/13/%E8%B0%88%E8%B0%88%E6%9C%80%E8%BF%91%E7%9A%84%E6%84%9F%E6%82%9F%E5%92%8C%E6%94%B6%E8%8E%B7/" class="post-title-link" itemprop="url">谈谈最近的感悟和收获</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-13 21:34:13" itemprop="dateCreated datePublished" datetime="2022-04-13T21:34:13+08:00">2022-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-19 19:43:14" itemprop="dateModified" datetime="2022-04-19T19:43:14+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%84%9F%E6%82%9F/" itemprop="url" rel="index"><span itemprop="name">感悟</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>研二已经开学一个多月了，各种压力在身上，喘不过气。</p>
+<h2 id="关于科研"><a href="#关于科研" class="headerlink" title="关于科研"></a>关于科研</h2><p>科研没什么进展，自己真的不咋会科研。</p>
+<p>导师做的方向虽然挺火的，但是觉得已经很完善了，没什么新的可以做，问了老师就说还有很多没解决的，自己多看论文。</p>
+<p>也是自己论文看的少，对这个方向还真的不够理解的透彻，只知道几个特殊的关键词，到目前为止还没复现过一篇论文，接下来的时间要好好学习python，我对java很熟悉，但对python真的生疏。</p>
+<p>但研二就在眼前，不知道专利在哪里飞，怎么写，接下来不管怎么样还是得搞一搞科研起码要有个idea。</p>
+<h2 id="关于生活"><a href="#关于生活" class="headerlink" title="关于生活"></a>关于生活</h2><p>学校封了一个半月，已经不想多说什么了，思考了很久决定回家学习，人身自由得到了保障。</p>
+<p>很多事情各自心里都有数，疫情不麻烦，各种奇葩的政策和抗疫的大方向给很多人带来了不便和影响了无数人的生计，希望会变得更好吧，作为一个普通百姓也做不了什么，只能在不同环境中选择对自己最好的。</p>
+<p>最近一个月恶补Java和算法还有一些开发的知识，也算是有所进步，但是学习的道路上总归是迷惘的，不过接下来应该主攻科研了.</p>
+<p>现在对科研方面有点焦虑还得暗中抹黑，不过还是不能放掉算法，每天算法还是要跟着做题目。</p>
+<p>也算对这一个多月做了一个总结了吧，希望我能在研二上把专利写出来，用文字记录，缓解了很多的焦虑。</p>
+<p><strong>Dare to dream,ready to achieve.</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
