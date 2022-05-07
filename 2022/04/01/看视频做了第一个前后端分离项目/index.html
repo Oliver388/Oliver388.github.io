@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"oliver388.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-  <meta name="description" content="Dare to dream,Ready to achieve">
+  <meta name="description" content="第一次复刻一个前后端分离的javaweb项目，此项目是基于尚硅谷的谷粒学院，是一个B2C的系统，分为前台用户系统和后台管理系统  项目技术选型 前端部分：使用主流的前端框架Vue，使用Es6的开发规范，采用模块化的开发模式。 后端部分：SpringBoot + SpringCloud + MyBatis-Plus + HttpClient + MySQL + Maven+EasyExcel+ n">
 <meta property="og:type" content="website">
 <meta property="og:title" content="第一个前后端分离项目">
 <meta property="og:url" content="https://oliver388.github.io/2022/04/01/%E7%9C%8B%E8%A7%86%E9%A2%91%E5%81%9A%E4%BA%86%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="Dare to dream,Ready to achieve">
+<meta property="og:description" content="第一次复刻一个前后端分离的javaweb项目，此项目是基于尚硅谷的谷粒学院，是一个B2C的系统，分为前台用户系统和后台管理系统  项目技术选型 前端部分：使用主流的前端框架Vue，使用Es6的开发规范，采用模块化的开发模式。 后端部分：SpringBoot + SpringCloud + MyBatis-Plus + HttpClient + MySQL + Maven+EasyExcel+ n">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-04-01T11:32:41.000Z">
-<meta property="article:modified_time" content="2022-04-13T14:09:00.252Z">
+<meta property="article:modified_time" content="2022-05-07T02:21:21.820Z">
 <meta property="article:author" content="Oliver Ling">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="前后端分离">
@@ -109,7 +109,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -122,6 +122,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">项目技术选型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E5%85%B7%E4%BD%93%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">项目具体内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E9%9A%8F%E7%AC%94"><span class="nav-number">3.</span> <span class="nav-text">项目随笔</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -225,7 +226,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-04-13 22:09:00" itemprop="dateModified" datetime="2022-04-13T22:09:00+08:00">2022-04-13</time>
+      <time title="修改时间：2022-05-07 10:21:21" itemprop="dateModified" datetime="2022-05-07T10:21:21+08:00">2022-05-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -247,7 +248,24 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <blockquote>
+<p>第一次复刻一个前后端分离的javaweb项目，此项目是基于尚硅谷的谷粒学院，是一个B2C的系统，分为前台用户系统和后台管理系统</p>
+</blockquote>
+<h2 id="项目技术选型"><a href="#项目技术选型" class="headerlink" title="项目技术选型"></a>项目技术选型</h2><ul>
+<li><strong>前端部分</strong>：使用主流的前端框架Vue，使用Es6的开发规范，采用模块化的开发模式。</li>
+<li><strong>后端部分</strong>：SpringBoot + SpringCloud + MyBatis-Plus + HttpClient + MySQL + Maven+EasyExcel+ nginx<ol>
+<li>使用目前流行的SpringBoot+SpringCloud进行微服务架构，使用Feign、Gateway、Hystrix，以及阿里巴巴的Nacos等组件搭建了项目的基础环境。</li>
+<li>采用mybatis-plus提高开发效率，使用代码生成器生成主框架，简化开发步骤。</li>
+<li>使用swagger来测试接口</li>
+<li>使用SpringSecurity整合项目登陆和权限管理，Redis进行数据缓存，将常用的数据存入 Redis，减少数据库访问量和并发量。</li>
+</ol>
+</li>
+<li>其他中间件：Redis、阿里云OSS、阿里云视频点 业务中使用了ECharts做图表展示，使用EasyExcel完成分类批量添加、注册分布式单点登录使用了JWT。</li>
+</ul>
+<h2 id="项目具体内容"><a href="#项目具体内容" class="headerlink" title="项目具体内容"></a>项目具体内容</h2><p>项目前后端分离开发，后端采用SpringCloud微服务架构，持久层用的是MyBatis-Plus，微服务分库设 计，使用Swagger生成接口文档，接入了阿里云视频点播、阿里云OSS。系统分为前台用户系统和后台管理系统两部分。<br>前台用户系统包括:首页、课程、名师、问答、文章。后台管理系统包括：讲师管理、课程分类管理、课程管理、统计分析、Banner管理、订单管理、权限管理等功能。</p>
+<h2 id="项目随笔"><a href="#项目随笔" class="headerlink" title="项目随笔"></a>项目随笔</h2><p>这是自从学习javaweb以来第一个跟着学做的前后端分离项目，之前零零散散的学各种技术栈一直处在非常割裂的状态，因为所学的知识都连不起来，这个项目让我了解了springboot的具体用法以及前后端分离项目具体是如何分离如何作用的。其实，对微服务也有一定的了解了，在开发的时候知道分模块开发，虽然远谈不上熟练，后面还会继续学习分布式微服务的知识。此次项目，收获颇多，编程水平也大幅提升。</p>
+<p><strong>Dare to dream, ready to achieve!</strong></p>
+
     </div>
 
     
