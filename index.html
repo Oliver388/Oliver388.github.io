@@ -85,9 +85,9 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
   </ul>
 </nav>
 
@@ -132,7 +132,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -143,7 +143,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,114 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://oliver388.github.io/2022/07/05/%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BA%E5%BA%94%E7%94%A8%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/notion-avatar-1645062347664.png">
+      <meta itemprop="name" content="Oliver Ling">
+      <meta itemprop="description" content="Dare to dream,Ready to achieve">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oliver">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/05/%E4%BD%BF%E7%94%A8Docker%E6%90%AD%E5%BB%BA%E5%BA%94%E7%94%A8%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/" class="post-title-link" itemprop="url">使用Docker搭建应用运行环境</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-05 14:02:59 / 修改时间：21:17:18" itemprop="dateCreated datePublished" datetime="2022-07-05T14:02:59+08:00">2022-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="什么是docker？"><a href="#什么是docker？" class="headerlink" title="什么是docker？"></a>什么是docker？</h3><p><strong>Docker</strong> 使用 <code>Google</code> 公司推出的 <a target="_blank" rel="noopener" href="https://golang.google.cn/">Go 语言</a>进行开发实现，基于 <code>Linux</code> 内核的 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Cgroups">cgroup</a>，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Linux_namespaces">namespace </a>，以及 <a target="_blank" rel="noopener" href="https://docs.docker.com/storage/storagedriver/overlayfs-driver/">OverlayFS</a>类的 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Union_mount">Union FS</a>等技术，对进程进行封装隔离，属于 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization">操作系统层面的虚拟化技术 </a>。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。</p>
+<h3 id="为什么要使用docker？"><a href="#为什么要使用docker？" class="headerlink" title="为什么要使用docker？"></a>为什么要使用docker？</h3><ol>
+<li>开发的程序最终的运行环境为Linux，开发环境不方便调试，并且避免了“代码在我电脑上没问题”的情况；</li>
+<li>MacOS上并没有好用的SSH管理工具，Windows上则有很多方便快捷的工具，直接使用ssh命令会出现掉线，文件传输不方便等情况，Docker则可以直接将主机目录挂载到；</li>
+<li>Docker是轻量级的容器，相比虚拟机而言，对电脑资源的要求更低，启动速度更快。</li>
+</ol>
+<h3 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h3><p>MacOS 通过brew安装</p>
+<p><code>$ brew cask install docker</code></p>
+<p>注意：docker有桌面版，如不加cask则下载的不是桌面版。但仍然可以通过命令行来使用，下载桌面版能可视化容器更方便。</p>
+<h3 id="获取一个镜像"><a href="#获取一个镜像" class="headerlink" title="获取一个镜像"></a>获取一个镜像</h3><p>Docker 官方维护了一个公共仓库 Docker Hub，我们可以直接从 Docker Hub 中获取我们想要的镜像。我们通过以下命令获取redis的最小镜像。</p>
+<p><code>$ docker pull redis</code></p>
+<h3 id="运行一个容器"><a href="#运行一个容器" class="headerlink" title="运行一个容器"></a>运行一个容器</h3><p>运行交互式容器，这样进入了一个交互式容器，里面可以对redis进行查询等操作，而这个容器只可以操作redis，完全与其他服务隔离开来，非常安全，即使服务宕机也丝毫不会影响其他服务，而且后期维护也非常简单。</p>
+<p><code>$ docker run -itd --name redis -p 6379:6379 -v 本地目的:容器目录 redis</code></p>
+<p>-i：以交互模式运行容器，通常与-t同时使用</p>
+<p>-d：后台运行容器，并返回容器ID，也即启动守护式容器</p>
+<p>-t：为容器重新分配一个伪输入终端，通常与-i同时使用</p>
+<p>写在一起就是组合命令，-id -it -itd</p>
+<p>–name：用来指定容器名称，如省略则会 Docker 会自动分配一个名称</p>
+<p>-v：代表挂载目录，本地目的和容器目录使用<code>:</code>分隔，均是绝对路径，当容器目录不存在时会自动创建，如需挂载多个目录，可以使用多个<code>-v</code>来挂载多个目录</p>
+<blockquote>
+<p><strong>-p 6379:6379</strong>：映射容器服务的 6379 端口到宿主机的 6379 端口。外部可以直接通过宿主机ip:6379 访问到 Redis 的服务。</p>
+</blockquote>
+<p><img src="/Users/linglifan/blog/public/images/2.png"></p>
+<p>使用<code>$ docker ps</code>可以查看容器中所有的容器</p>
+<p><img src="/Users/linglifan/blog/public/images/3.png"></p>
+<h3 id="进入环境"><a href="#进入环境" class="headerlink" title="进入环境"></a>进入环境</h3><p>使用docker命令登录到redis容器中</p>
+<p><code>docker exec -it redis bash</code></p>
+<p>启动redis客户端</p>
+<p><code>redis-cli</code></p>
+<p><img src="/Users/linglifan/blog/public/images/1.png"></p>
+<p>然后就可以在docker中运行redis，就和在docker外运行是一样的，且已经将本地目录挂载到容器内目录，即使以后该容器损坏或删除，数据一直是存在本地的，并无损失。</p>
+<p>以上就是我第一次用Docker的一些心得～</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/docker-tutorial.html">菜鸟教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://vuepress.mirror.docker-practice.com/">Docker — 从入门到实践</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
